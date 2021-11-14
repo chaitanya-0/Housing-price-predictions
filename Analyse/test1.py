@@ -10,16 +10,17 @@ delhi.info()
 # %%
 delhi.iloc[[0, 1, 2, 3, 4, 5, 9], [0, 1, 2, 3]]
 # %%
-delhi.loc[[], ["Price", "Area", "Location"]]
+delhi.loc[[0, 1, 3, 4, 5, 10], ["Price", "Area", "Location"]]
 # %%
 # price vs carpet area scatter plot
-y = np.log(delhi["Price"])
-plt.scatter(delhi["Area"], y)
+#y = np.log(delhi["Price"])
+plt.scatter(delhi["Area"], delhi["Price"])
 plt.title("carpet area vs price")
 plt.xlabel("Carpet Area")
 plt.ylabel("Price")
 # plt.xscale("log")
-# plt.yscale("log")
+plt.yscale("log")
+
 plt.show()
 # %%
 # price vs no. of bedrooms
