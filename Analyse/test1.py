@@ -3,13 +3,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 column_names = []
-delhi = pd.read_csv("cities/Delhi.csv")
+delhi = pd.read_csv("../cities/Delhi.csv")
 
 # %%
 delhi.info()
 # %%
 delhi.iloc[[0, 1, 2, 3, 4, 5, 9], [0, 1, 2, 3]]
-
+# %%
+delhi.loc[[], ["Price", "Area", "Location"]]
 # %%
 # price vs carpet area scatter plot
 y = np.log(delhi["Price"])
